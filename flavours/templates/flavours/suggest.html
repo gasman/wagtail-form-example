@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load wagtailcore_tags %}
 
 {% block body_class %}template-suggest{% endblock %}
 
 {% block content %}
-    <h1>Suggest a flavour</h1>
+    <h1>{{ page.title }}</h1>
 
-    <p>What flavour of ice cream should we make next?</p>
+    {{ page.intro | richtext }}
 
     <form action="." method="POST">
         {% csrf_token %}

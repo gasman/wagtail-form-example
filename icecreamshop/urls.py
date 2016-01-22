@@ -8,8 +8,6 @@ from wagtail.wagtailcore import urls as wagtail_urls
 
 from search import views as search_views
 
-from flavours import views as flavour_views
-
 
 urlpatterns = [
     url(r'^django-admin/', include(admin.site.urls)),
@@ -18,8 +16,6 @@ urlpatterns = [
     url(r'^documents/', include(wagtaildocs_urls)),
 
     url(r'^search/$', search_views.search, name='search'),
-
-    url(r'^suggest-a-flavour/$', flavour_views.suggest),
 
     url(r'', include(wagtail_urls)),
 ]
