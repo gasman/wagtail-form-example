@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body_class %}template-thankyou{% endblock %}
+
+{% block content %}
+    <h1>Thank you for your suggestion!</h1>
+
+    <p>
+        Thanks, {{ flavour.your_name }}! We'll review your suggestion, and if we like it,
+        you might see {{ flavour.flavour_name }} in our shop soon...
+    </p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body_class %}template-suggest{% endblock %}
+
+{% block content %}
+    <h1>Suggest a flavour</h1>
+
+    <p>What flavour of ice cream should we make next?</p>
+
+    <form action="." method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        
+        <p><input type="submit" value="Suggest my flavour"></p>
+    </form>
+{% endblock %}
